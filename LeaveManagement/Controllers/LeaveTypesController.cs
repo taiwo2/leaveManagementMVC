@@ -85,7 +85,9 @@ namespace Leavemanagement.Controllers
             {
                 return NotFound();
             }
-            return View(leaveType);
+
+            var leaveTypes = _mapper.Map<LeaveTypeVM>(leaveType);
+            return View(leaveTypes);
         }
 
         // POST: LeaveTypes/Edit/5
