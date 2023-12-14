@@ -6,24 +6,30 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LeaveManagement.Data;
+using AutoMapper;
+using LeaveManagement.Models;
 
 namespace Leavemanagement.Controllers
 {
     public class LeaveTypesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public LeaveTypesController(ApplicationDbContext context)
+        public LeaveTypesController(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         // GET: LeaveTypes
         public async Task<IActionResult> Index()
         {
-              return _context.LeaveTypes != null ? 
-                          View(await _context.LeaveTypes.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.LeaveTypes'  is null.");
+            // var leavs= _mapper.Map<List<LeaveTypeVM>>( await _context.LeaveTypes.ToListAsync());
+
+            // return View(leavs);
+            return  _context.LeaveTypes != null ? View(_mapper.Map<List<LeaveTypeVM>>(await _context.LeaveTypes.ToListAsync())) :
+                    Problem("Entity set 'ApplicationDbContext.LeaveTypes'  is null.");
         }
 
         // GET: LeaveTypes/Details/5
@@ -55,15 +61,15 @@ namespace Leavemanagement.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,DefaultDays,Id,DateCreated,DateModified")] LeaveType leaveType)
+        public async Task<IActionResult> Create(LeaveTypeVM leaveTypeVM)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(leaveType);
+                _context.Add(leaveTypeVM);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(leaveType);
+            return View(leaveTypeVM);
         }
 
         // GET: LeaveTypes/Edit/5
