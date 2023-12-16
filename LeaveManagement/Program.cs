@@ -3,6 +3,8 @@ using Leavemanagement.Mapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using LeaveManagement.Services;
+using LeaveManagement.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,9 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<Employee>(options => options.SignIn.RequireConfirmedAccount = true)
 	.AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddScoped(typeof(IGeneric<>), typeof(GenericService<>)); 
+builder.Services.AddScoped<ILeaveType, LeaveTypeService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 // builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.
