@@ -25,7 +25,7 @@ builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireC
 
 builder.Services.AddScoped(typeof(IGeneric<>), typeof(GenericService<>)); 
 builder.Services.AddScoped<ILeaveType, LeaveTypeService>();
-// builder.Services.AddScoped<ILeaveAllocation, LeaveAllocationService>();
+builder.Services.AddScoped<ILeaveAllocation, LeaveAllocationService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 // builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.

@@ -19,11 +19,13 @@ namespace Leavemanagement.Controllers
     public class LeaveTypesController : Controller
     {
         private readonly ILeaveType _leaveType;
+        private readonly ILeaveAllocation _leaveAllocation;
         private readonly IMapper _mapper;
 
-        public LeaveTypesController(ILeaveType leaveType, IMapper mapper)
+        public LeaveTypesController(ILeaveType leaveType, IMapper mapper, ILeaveAllocation leaveAllocation)
         {
             _leaveType = leaveType;
+            _leaveAllocation= leaveAllocation;
             _mapper = mapper;
         }
 
@@ -158,7 +160,7 @@ namespace Leavemanagement.Controllers
 
         public async Task<IActionResult> AllocateLeave(int id)
         {
-            await LeaveAllocationService.LeaveAllocation(id);
+            await _leaveAllocation.LeaveAllocation(id);
 			return RedirectToAction(nameof(Index));
 		}
 	
