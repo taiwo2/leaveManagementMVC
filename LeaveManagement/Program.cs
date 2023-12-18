@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using LeaveManagement.Services;
 using LeaveManagement.Contracts;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,7 @@ builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireC
 
 // builder.Services.AddIdentityCore<Employee>(options => options.SignIn.RequireConfirmedAccount = true)
 // 	.AddEntityFrameworkStores<ApplicationDbContext>();
+// builder.Services.AddTransient<IEmailSender>(s => new EmailSender("localhost", 25, "no-reply@leavemanagement.com"));
 
 builder.Services.AddScoped(typeof(IGeneric<>), typeof(GenericService<>)); 
 builder.Services.AddScoped<ILeaveType, LeaveTypeService>();

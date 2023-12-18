@@ -9,9 +9,13 @@ using LeaveManagement.Data;
 using AutoMapper;
 using LeaveManagement.Models;
 using LeaveManagement.Contracts;
+using Microsoft.AspNetCore.Authorization;
+using LeaveManagement.RolesEntities;
+using LeaveManagement.Services;
 
 namespace Leavemanagement.Controllers
 {
+    [Authorize(Roles = Roles.Administrator)]
     public class LeaveTypesController : Controller
     {
         private readonly ILeaveType _leaveType;
@@ -148,5 +152,15 @@ namespace Leavemanagement.Controllers
         // {
         //   return await _leaveType.Exists(id);
         // }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> AllocateLeave(int id)
+        {
+            await LeaveAllocationService.LeaveAllocation(id);
+			return RedirectToAction(nameof(Index));
+		}
+	
     }
 }
