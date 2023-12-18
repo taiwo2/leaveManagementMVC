@@ -9,10 +9,10 @@ namespace LeaveManagement.Models
         [Display(Name = "First Name")]
         public string Firstname { get; set; }
 		    [Display(Name = "Last Name")]
-		    public string Lastname { get; set; }
-		    [Display(Name = "Date Joined")]
-		    public string DateJoined { get; set; }
-		    [Display(Name = "Email Address")]
+		public string Lastname { get; set; }
+		[Display(Name = "Date Joined")]
+		public string DateJoined { get; set; }
+		[Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
     }
 }
