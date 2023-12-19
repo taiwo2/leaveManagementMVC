@@ -150,10 +150,6 @@ namespace Leavemanagement.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // private async Task<bool> LeaveTypeExistsAsync(int id)
-        // {
-        //   return await _leaveType.Exists(id);
-        // }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

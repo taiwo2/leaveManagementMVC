@@ -18,7 +18,7 @@ namespace Leavemanagement.Controllers
     {
         private readonly UserManager<Employee> _userManager;
         private readonly IMapper _mapper;
-        private readonly ILeaveAllocation leaveAllocation;
+        private readonly ILeaveAllocation _leaveAllocation;
         public EmployeesController(UserManager<Employee> userManager,IMapper mapper, ILeaveAllocation leaveAllocation)
         {
             _userManager = userManager;
