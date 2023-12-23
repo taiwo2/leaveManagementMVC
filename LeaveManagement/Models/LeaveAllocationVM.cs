@@ -6,7 +6,7 @@ namespace LeaveManagement.Models
     {
         public int Id { get; set; }
         public int NumberOfDays { get; set; }
-        public int Perid { get; set; }
+        public int Period { get; set; }
         public LeaveTypeVM LeaveType { get; set; }
 
     }

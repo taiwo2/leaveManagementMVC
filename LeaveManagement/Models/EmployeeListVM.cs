@@ -13,6 +13,6 @@ namespace LeaveManagement.Models
 		[Display(Name = "Date Joined")]
 		public string DateJoined { get; set; }
 		[Display(Name = "Email Address")]
-        public string EmailAddress { get; set; }
+        public string Email { get; set; }
     }
 }
