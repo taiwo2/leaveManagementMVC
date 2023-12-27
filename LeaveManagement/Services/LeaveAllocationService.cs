@@ -26,21 +26,20 @@ namespace LeaveManagement.Services
 
 		public async Task<bool> AllocationExists(string employeeId, int leaveTypeId, int period)
 		{
-			return await _context.LeaveAllLocations.AnyAsync(q => q.EmployeeId == employeeId &&
-        q.LeaveTypeId == leaveTypeId && q.Period == period);
+			return await _context.LeaveAllocations.AnyAsync(q => q.EmployeeId == employeeId && q.LeaveTypeId == leaveTypeId && q.Period == period);
 		}
 
 		public async Task<EmployeeAllocationVM> GetEmployeeAllocations(string employeeId)
 		{
-			var allocations = _context.LeaveAllLocations
+			var allocations = _context.LeaveAllocations
 				.Include(q => q.LeaveType)
 				.Where(q => q.EmployeeId == employeeId)
 				.ToListAsync();
 				
-			var employee = await _userManager.FindByEmailAsync(employeeId);
+			var employee = await _userManager.FindByIdAsync(employeeId);
 
 			var employeeAllocationModel = _mapper.Map<EmployeeAllocationVM>(employee);
-			employeeAllocationModel.leaveAllocations = _mapper.Map<List<LeaveAllocationVM>>(allocations);
+			employeeAllocationModel.LeaveAllocations = _mapper.Map<List<LeaveAllocationVM>>(allocations);
 
 			return employeeAllocationModel;
 		}

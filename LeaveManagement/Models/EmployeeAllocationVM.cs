@@ -2,8 +2,8 @@ using LeaveManagement.Data;
 
 namespace LeaveManagement.Models
 {
-    public class EmployeeAllocationVM   :  EmployeeListVM
+    public class EmployeeAllocationVM:  EmployeeListVM
     {
-        public List<LeaveAllocationVM> leaveAllocations { get; set; }
+        public List<LeaveAllocationVM> LeaveAllocations { get; set; }
     }
 }

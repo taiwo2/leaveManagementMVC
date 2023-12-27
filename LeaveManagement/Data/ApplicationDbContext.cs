@@ -18,7 +18,7 @@ namespace LeaveManagement.Data
 			builder.ApplyConfiguration(new UserRoleSeedConfiguration());
 		}
 		public DbSet<LeaveType> LeaveTypes { get; set; }
-		public DbSet<LeaveAllocation> LeaveAllLocations { get; set; }
+		public DbSet<LeaveAllocation> LeaveAllocations { get; set; }
 
 	}
 }

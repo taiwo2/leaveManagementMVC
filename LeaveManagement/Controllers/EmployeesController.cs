@@ -18,12 +18,13 @@ namespace Leavemanagement.Controllers
     {
         private readonly UserManager<Employee> _userManager;
         private readonly IMapper _mapper;
-        private readonly ILeaveAllocation _leaveAllocation;
+        private readonly ILeaveAllocation leaveAllocation;
         public EmployeesController(UserManager<Employee> userManager,IMapper mapper, ILeaveAllocation leaveAllocation)
         {
             _userManager = userManager;
             _mapper = mapper;
-            _leaveAllocation = leaveAllocation;
+            _leaveAllocation = leaveAllocation ?? throw new ArgumentNullException(nameof(leaveAllocation));
+
         }
         // GET: EmployeesController
         public async Task<IActionResult> Index() 
@@ -62,15 +63,22 @@ namespace Leavemanagement.Controllers
         }
 
         // GET: EmployeesController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> EditAllocation(int id)
         {
-            return View();
+               var leaveAllocation = await _leaveAllocation.GetAsync(id);
+                if (leaveAllocation == null)
+                {
+                    return NotFound();
+                }
+
+                var leaveAllocationVM = _mapper.Map<LeaveAllocationVM>(leaveAllocation);
+                return View(leaveAllocationVM);
         }
 
         // POST: EmployeesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult EditAllocation(int id, IFormCollection collection)
         {
             try
             {
