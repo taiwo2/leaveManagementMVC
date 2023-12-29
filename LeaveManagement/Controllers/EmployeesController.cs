@@ -18,12 +18,12 @@ namespace Leavemanagement.Controllers
     {
         private readonly UserManager<Employee> _userManager;
         private readonly IMapper _mapper;
-        private readonly ILeaveAllocation leaveAllocation;
+        private readonly ILeaveAllocation _leaveAllocation;
         public EmployeesController(UserManager<Employee> userManager,IMapper mapper, ILeaveAllocation leaveAllocation)
         {
             _userManager = userManager;
             _mapper = mapper;
-            _leaveAllocation = leaveAllocation ?? throw new ArgumentNullException(nameof(leaveAllocation));
+            _leaveAllocation = leaveAllocation;
 
         }
         // GET: EmployeesController
@@ -65,14 +65,12 @@ namespace Leavemanagement.Controllers
         // GET: EmployeesController/Edit/5
         public async Task<ActionResult> EditAllocation(int id)
         {
-               var leaveAllocation = await _leaveAllocation.GetAsync(id);
-                if (leaveAllocation == null)
-                {
-                    return NotFound();
-                }
-
-                var leaveAllocationVM = _mapper.Map<LeaveAllocationVM>(leaveAllocation);
-                return View(leaveAllocationVM);
+            var model = await _leaveAllocation.GetEmployeeAllocation(id);
+            if (model == null)
+            {
+                return NotFound();
+            }
+            return View(model);
         }
 
         // POST: EmployeesController/Edit/5
