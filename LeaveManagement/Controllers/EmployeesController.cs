@@ -11,6 +11,7 @@ using LeaveManagement.Models;
 using LeaveManagement.Contracts;
 using LeaveManagement.Services;
 using LeaveManagement.RolesEntities;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Leavemanagement.Controllers
 {
@@ -19,11 +20,13 @@ namespace Leavemanagement.Controllers
         private readonly UserManager<Employee> _userManager;
         private readonly IMapper _mapper;
         private readonly ILeaveAllocation _leaveAllocation;
-        public EmployeesController(UserManager<Employee> userManager,IMapper mapper, ILeaveAllocation leaveAllocation)
+        private readonly ILeaveType _leaveType;
+        public EmployeesController(UserManager<Employee> userManager,IMapper mapper, ILeaveAllocation leaveAllocation, ILeaveType leaveType)
         {
             _userManager = userManager;
             _mapper = mapper;
             _leaveAllocation = leaveAllocation;
+            _leaveType = leaveType;
 
         }
         // GET: EmployeesController
@@ -76,16 +79,33 @@ namespace Leavemanagement.Controllers
         // POST: EmployeesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditAllocation(int id, IFormCollection collection)
+        public async ActionResult EditAllocation(int id, LeaveAllocationEditVM model)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid) 
+                {
+                    var leaveAllocation = await _leaveAllocation.GetAllAsync(Model.Id);
+                    if (leaveAllocation == null)
+                    {
+                        return NotFound();
+                    }
+
+                    leaveAllocation.Period = model.Period;
+                    leaveAllocation.NumberOfDays = model.NumberOfDays;
+                    await _leaveAllocation.UpdateAsync(leaveAllocation);
+
+                    return RedirectToAction(nameof(ViewAllocations), new { id = model.EmployeeId });
+
+                }
             }
-            catch
-            {
-                return View();
+            catch(Exception ex)
+            {  
+                 ModelState.AddModelError(string.Empty, "An Errorr Has Occured. Please Try Agian Later");
             }
+            model.Employee = _mapper.Map<EmployeeListVM>(await _userManager.FindByIdAsync(model.EmployeeId));
+            model.LeaveType = _mapper.Map<LeaveTypeVM>(await _leaveType.GetAsync(model.LeaveTypeId));
+            return View(model);
         }
 
         // GET: EmployeesController/Delete/5
