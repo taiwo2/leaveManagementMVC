@@ -79,13 +79,13 @@ namespace Leavemanagement.Controllers
         // POST: EmployeesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async ActionResult EditAllocation(int id, LeaveAllocationEditVM model)
+        public async Task<ActionResult> EditAllocation(int id, LeaveAllocationEditVM model)
         {
             try
             {
                 if (ModelState.IsValid) 
                 {
-                    var leaveAllocation = await _leaveAllocation.GetAllAsync(Model.Id);
+                    var leaveAllocation = await _leaveAllocation.GetAsync(model.Id);
                     if (leaveAllocation == null)
                     {
                         return NotFound();
@@ -101,7 +101,7 @@ namespace Leavemanagement.Controllers
             }
             catch(Exception ex)
             {  
-                 ModelState.AddModelError(string.Empty, "An Errorr Has Occured. Please Try Agian Later");
+                ModelState.AddModelError(string.Empty, "An Errorr Has Occured. Please Try Agian Later");
             }
             model.Employee = _mapper.Map<EmployeeListVM>(await _userManager.FindByIdAsync(model.EmployeeId));
             model.LeaveType = _mapper.Map<LeaveTypeVM>(await _leaveType.GetAsync(model.LeaveTypeId));
