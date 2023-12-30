@@ -18,7 +18,7 @@ builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireC
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-
+builder.Services.AddHttpContextAccessor();
 // builder.Services.AddIdentityCore<Employee>(options => options.SignIn.RequireConfirmedAccount = true)
 // 	.AddEntityFrameworkStores<ApplicationDbContext>();
 // builder.Services.AddTransient<IEmailSender>(s => new EmailSender("localhost", 25, "no-reply@leavemanagement.com"));
@@ -26,6 +26,7 @@ builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireC
 builder.Services.AddScoped(typeof(IGeneric<>), typeof(GenericService<>)); 
 builder.Services.AddScoped<ILeaveType, LeaveTypeService>();
 builder.Services.AddScoped<ILeaveAllocation, LeaveAllocationService>();
+builder.Services.AddScoped<ILeaveRequest, LeaveRequestService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 // builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.

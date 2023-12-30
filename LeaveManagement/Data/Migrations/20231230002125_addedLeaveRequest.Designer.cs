@@ -3,6 +3,7 @@ using System;
 using LeaveManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagement.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231230002125_addedLeaveRequest")]
+    partial class addedLeaveRequest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
@@ -102,7 +105,7 @@ namespace LeaveManagement.Data.Migrations
                         {
                             Id = "6d77d78b9d7d-1c3e-449d-f66e1234",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d32619f0-cc9c-498c-9df1-3da8bb848172",
+                            ConcurrencyStamp = "101e9f74-ccae-495b-9651-7e0006d782c7",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "adminsson@hotmail.com",
@@ -112,9 +115,9 @@ namespace LeaveManagement.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMINSSON@HOTMAIL.COM",
                             NormalizedUserName = "ADMINSSON@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECOHYzQ70RpJdg0zWvH3bA8xXhpxbX1EdpOlnnNDubUXjFHW4P+cAoBAdHdaAN5ZlQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDeIycVbFlF8rxPIMAMw2jLo8qbkVAfyweSN/pabU60yjE5n1kf8kqyqDkx8NIEHSQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a87fdbe4-7607-4284-ac03-4ae1aa192c44",
+                            SecurityStamp = "9a7083da-ae14-4b57-bb2b-f515d901d8bf",
                             TwoFactorEnabled = false,
                             UserName = "adminsson@hotmail.com"
                         },
@@ -122,7 +125,7 @@ namespace LeaveManagement.Data.Migrations
                         {
                             Id = "f66e1234-1c3e-449d-80c7-6d77d7",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fb42eb1b-95b5-421a-8c54-127690f87925",
+                            ConcurrencyStamp = "9dca908b-1278-46b2-b86b-ff56188677bb",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "usersson@hotmail.com",
@@ -132,9 +135,9 @@ namespace LeaveManagement.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USERSSON@HOTMAIL.COM",
                             NormalizedUserName = "USERSSON@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIL2R8hcDJVFVk1pEObYZJYbr4Zm3x/XgpFaCCrgVE1zpW5wyRY5/lMFD/wJyrukAg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMaM7eYG1OVK+da5eY39ggvL4OfHFUPKGZPMOpG8XeWmczY+VRpsmv6IOxlzDHLFwQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9fe16652-43f5-4eb3-914e-e139b9ca2734",
+                            SecurityStamp = "f031ff92-7d87-471b-ae73-51be6d7838ed",
                             TwoFactorEnabled = false,
                             UserName = "usersson@hotmail.com"
                         });

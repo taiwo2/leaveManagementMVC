@@ -44,26 +44,6 @@ namespace Leavemanagement.Controllers
             return View(model);
         }
 
-        // GET: EmployeesController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: EmployeesController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
         // GET: EmployeesController/Edit/5
         public async Task<ActionResult> EditAllocation(int id)
@@ -83,20 +63,12 @@ namespace Leavemanagement.Controllers
         {
             try
             {
-                if (ModelState.IsValid) 
+                if (ModelState.IsValid)
                 {
-                    var leaveAllocation = await _leaveAllocation.GetAsync(model.Id);
-                    if (leaveAllocation == null)
+                    if(await _leaveAllocation.UpdateEmployeeAllocation(model))
                     {
-                        return NotFound();
+                        return RedirectToAction(nameof(ViewAllocations), new { id = model.EmployeeId });
                     }
-
-                    leaveAllocation.Period = model.Period;
-                    leaveAllocation.NumberOfDays = model.NumberOfDays;
-                    await _leaveAllocation.UpdateAsync(leaveAllocation);
-
-                    return RedirectToAction(nameof(ViewAllocations), new { id = model.EmployeeId });
-
                 }
             }
             catch(Exception ex)
@@ -114,19 +86,5 @@ namespace Leavemanagement.Controllers
             return View();
         }
 
-        // POST: EmployeesController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
