@@ -1,4 +1,5 @@
 using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using LeaveManagement.RolesEntities;
 using LeaveManagement.Contracts;
 using LeaveManagement.Data;
@@ -13,14 +14,18 @@ namespace LeaveManagement.Services
 		private readonly ILeaveType _leaveType;
 		private readonly IMapper _mapper;
 		private readonly ApplicationDbContext _context;
+
+		 private readonly AutoMapper.IConfigurationProvider _configurationProvider;
 		private readonly UserManager<Employee> _userManager;
 
 		public LeaveAllocationService(ApplicationDbContext context,
-			UserManager<Employee> userManager, ILeaveType leaveType, IMapper mapper) : base(context)
+			UserManager<Employee> userManager, ILeaveType leaveType, IMapper mapper,
+			AutoMapper.IConfigurationProvider configurationProvider) : base(context)
 		{
 			_leaveType = leaveType;
 			_mapper = mapper;
 			_context = context;
+			_configurationProvider = configurationProvider;
 			_userManager = userManager;
 		}
 
@@ -31,15 +36,17 @@ namespace LeaveManagement.Services
 
 		public async Task<EmployeeAllocationVM> GetEmployeeAllocations(string employeeId)
 		{
-			var allocations = _context.LeaveAllocations
+			var allocations = await _context.LeaveAllocations
 				.Include(q => q.LeaveType)
 				.Where(q => q.EmployeeId == employeeId)
+				.ProjectTo<LeaveAllocationVM>(_configurationProvider)
 				.ToListAsync();
 				
 			var employee = await _userManager.FindByIdAsync(employeeId);
 
 			var employeeAllocationModel = _mapper.Map<EmployeeAllocationVM>(employee);
-			employeeAllocationModel.LeaveAllocations = _mapper.Map<List<LeaveAllocationVM>>(allocations);
+			employeeAllocationModel.LeaveAllocations = allocations;
+			// employeeAllocationModel.LeaveAllocations = _mapper.Map<List<LeaveAllocationVM>>(allocations);
 
 			return employeeAllocationModel;
 		}
@@ -48,7 +55,7 @@ public async Task<LeaveAllocationEditVM> GetEmployeeAllocation(int id)
         {
             var allocation = await _context.LeaveAllocations
                 .Include(q => q.LeaveType)
-                // .ProjectTo<LeaveAllocationEditVM>(configurationProvider)
+                .ProjectTo<LeaveAllocationEditVM>(_configurationProvider)
                 .FirstOrDefaultAsync(q => q.Id == id);
 
             if(allocation == null)
