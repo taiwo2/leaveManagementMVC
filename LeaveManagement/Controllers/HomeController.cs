@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Leavemanagement.Models;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace Leavemanagement.Controllers;
 
@@ -28,11 +29,11 @@ public class HomeController : Controller
     {
         var requestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         var exceptionHandlerPathfeature =  HttpContext.Features.Get<IExceptionHandlerPathFeature>();
-        if (exceptionHandlerPathfeature) != null)
+        if (exceptionHandlerPathfeature != null)
         {
             Exception exception = exceptionHandlerPathfeature.Error;
-            _logger.LogEror(exceptio, $"Error Encounter by User: {this.user?.Identity?.Name} | Request Id: {requestId}")
+            _logger.LogError(exception, $"Error Encounter by User: {this.User?.Identity?.Name} | Request Id: {requestId}");
         };
-        return View(new ErrorViewModel {  RequestId  =RequestId });
+        return View(new ErrorViewModel {  RequestId  = requestId });
     }
 }

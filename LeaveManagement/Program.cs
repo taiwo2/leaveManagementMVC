@@ -6,6 +6,7 @@ using AutoMapper;
 using LeaveManagement.Services;
 using LeaveManagement.Contracts;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);

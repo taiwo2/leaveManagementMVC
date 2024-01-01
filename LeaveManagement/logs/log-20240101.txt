@@ -1,0 +1,36 @@
+2024-01-01 23:42:24.639 +00:00 [INF] Now listening on: http://localhost:5265
+2024-01-01 23:42:24.742 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-01 23:42:24.743 +00:00 [INF] Hosting environment: Development
+2024-01-01 23:42:24.743 +00:00 [INF] Content root path: /Users/user/Projects/LeaveManagement/LeaveManagement
+2024-01-01 23:42:58.360 +00:00 [WRN] Failed to determine the https port for redirect.
+2024-01-01 23:43:06.686 +00:00 [INF] HTTP GET /LeaveRequests responded 200 in 8056.2676 ms
+2024-01-01 23:43:07.364 +00:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 402.9043 ms
+2024-01-01 23:43:07.435 +00:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 474.7896 ms
+2024-01-01 23:43:07.458 +00:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 1007.1038 ms
+2024-01-01 23:43:12.695 +00:00 [INF] HTTP GET /Employees responded 200 in 600.6427 ms
+2024-01-01 23:43:16.109 +00:00 [INF] HTTP GET /Employees/ViewAllocations/df73a398-9f47-4d06-8c33-73ff5da57d27 responded 200 in 743.3694 ms
+2024-01-01 23:43:19.208 +00:00 [INF] User logged out.
+2024-01-01 23:43:19.235 +00:00 [INF] HTTP POST /Identity/Account/Logout responded 302 in 403.8946 ms
+2024-01-01 23:43:19.312 +00:00 [INF] HTTP GET / responded 200 in 52.5080 ms
+2024-01-01 23:43:21.145 +00:00 [INF] HTTP GET /Identity/Account/Login responded 200 in 613.3104 ms
+2024-01-01 23:43:21.316 +00:00 [INF] HTTP GET /Identity/lib/jquery-validation/dist/jquery.validate.js responded 200 in 85.8779 ms
+2024-01-01 23:43:25.255 +00:00 [INF] User logged in.
+2024-01-01 23:43:25.256 +00:00 [INF] HTTP POST /Identity/Account/Login responded 302 in 283.1314 ms
+2024-01-01 23:43:25.264 +00:00 [INF] HTTP GET / responded 200 in 2.5961 ms
+2024-01-01 23:43:27.482 +00:00 [INF] HTTP GET /LeaveRequests/MyLeave responded 200 in 172.5426 ms
+2024-01-01 23:43:29.540 +00:00 [INF] HTTP GET /LeaveRequests/Create responded 200 in 138.9394 ms
+2024-01-01 23:43:39.391 +00:00 [INF] HTTP POST /LeaveRequests/Create responded 200 in 41.8881 ms
+2024-01-01 23:43:55.860 +00:00 [INF] HTTP POST /LeaveRequests/Create responded 200 in 3.9086 ms
+2024-01-01 23:44:05.516 +00:00 [INF] HTTP GET /LeaveRequests/MyLeave responded 200 in 7.4061 ms
+2024-01-01 23:45:15.097 +00:00 [INF] HTTP GET / responded 200 in 1.1383 ms
+2024-01-01 23:45:34.450 +00:00 [INF] HTTP GET / responded 200 in 1.7430 ms
+2024-01-01 23:45:35.096 +00:00 [INF] HTTP GET / responded 200 in 1.4633 ms
+2024-01-01 23:45:35.783 +00:00 [INF] HTTP GET /LeaveRequests/MyLeave responded 200 in 6.8950 ms
+2024-01-01 23:45:37.222 +00:00 [INF] HTTP GET /LeaveRequests/Create responded 200 in 3.9631 ms
+2024-01-01 23:45:39.113 +00:00 [INF] HTTP GET / responded 200 in 0.9210 ms
+2024-01-01 23:45:41.006 +00:00 [INF] HTTP GET /LeaveRequests/Create responded 200 in 3.0285 ms
+2024-01-01 23:45:42.892 +00:00 [INF] User logged out.
+2024-01-01 23:45:42.892 +00:00 [INF] HTTP POST /Identity/Account/Logout responded 302 in 1.6096 ms
+2024-01-01 23:45:42.904 +00:00 [INF] HTTP GET / responded 200 in 0.5817 ms
+2024-01-01 23:48:00.987 +00:00 [INF] HTTP GET / responded 200 in 0.8309 ms
+2024-01-01 23:50:27.154 +00:00 [INF] Application is shutting down...

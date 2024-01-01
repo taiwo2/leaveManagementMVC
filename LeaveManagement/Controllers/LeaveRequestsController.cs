@@ -12,11 +12,13 @@ namespace LeaveManagement.Web.Controllers
     {
         private readonly ILeaveRequest _leaveRequest;
         private readonly ILeaveType _leaveType;
+        private readonly ILogger<LeaveRequestsController> _logger;
 
-        public LeaveRequestsController(ILeaveRequest leaveRequest, ILeaveType leaveType)
+        public LeaveRequestsController(ILeaveRequest leaveRequest, ILeaveType leaveType,ILogger<LeaveRequestsController> logger)
         {
             _leaveRequest = leaveRequest;
             _leaveType = leaveType;
+            _logger = logger;
         }
 
         [Authorize(Roles = Roles.Administrator)]
@@ -54,7 +56,7 @@ namespace LeaveManagement.Web.Controllers
             }
             catch (Exception ex)
             {
-
+                _logger.LogError(ex,"Error Approving reQuest");
                 throw;
             }
             return RedirectToAction(nameof(Index));
@@ -107,6 +109,7 @@ namespace LeaveManagement.Web.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex,"Error Creating reQuest");
                 ModelState.AddModelError(string.Empty, "An Error Has Occurred. Please Try Again Later");
             }
 
