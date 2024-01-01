@@ -12,6 +12,8 @@ using LeaveManagement.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using LeaveManagement.RolesEntities;
 using LeaveManagement.Services;
+using LeaveManagement.RolesEntities;
+using LeaveManagement.Contracts;
 
 namespace Leavemanagement.Controllers
 {
@@ -98,11 +100,18 @@ namespace Leavemanagement.Controllers
                 return NotFound();
             }
 
+            var leaveType = await _leaveType.GetAsync(id);
+
+            if(leaveType == null)
+            {
+                return NotFound();
+            }
+
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var leaveType = _mapper.Map<LeaveType>(leaveTypeVM);
+                     _mapper.Map(leaveTypeVM,leaveType);
                     await  _leaveType.UpdateAsync(leaveType);
                 }
                 catch (DbUpdateConcurrencyException)

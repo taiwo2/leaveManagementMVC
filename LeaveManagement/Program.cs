@@ -28,6 +28,11 @@ builder.Services.AddScoped<ILeaveType, LeaveTypeService>();
 builder.Services.AddScoped<ILeaveAllocation, LeaveAllocationService>();
 builder.Services.AddScoped<ILeaveRequest, LeaveRequestService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+builder.Host.UseSerilog((ctx, lc) => 
+    lc.WriteTo.Console()
+    .ReadFrom.Configuration(ctx.Configuration));
+
 // builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -35,6 +40,7 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+app.UseSerilogRequestLogging();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

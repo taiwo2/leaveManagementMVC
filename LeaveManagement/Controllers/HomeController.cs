@@ -26,6 +26,13 @@ public class HomeController : Controller
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        var requestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+        var exceptionHandlerPathfeature =  HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+        if (exceptionHandlerPathfeature) != null)
+        {
+            Exception exception = exceptionHandlerPathfeature.Error;
+            _logger.LogEror(exceptio, $"Error Encounter by User: {this.user?.Identity?.Name} | Request Id: {requestId}")
+        };
+        return View(new ErrorViewModel {  RequestId  =RequestId });
     }
 }

@@ -98,8 +98,8 @@ namespace LeaveManagement.Services
 
             await AddAsync(leaveRequest);
 
-            await _emailSender.SendEmailAsync(user.Email, "Leave Request Submitted Successfully", $"Your leave request from " +
-                $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been submitted for approval");
+            // await _emailSender.SendEmailAsync(user.Email, "Leave Request Submitted Successfully", $"Your leave request from " +
+            //     $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been submitted for approval");
 
             return true;
         }
