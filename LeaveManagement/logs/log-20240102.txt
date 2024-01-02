@@ -307,3 +307,95 @@
 2024-01-02 02:38:28.455 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0634 ms
 2024-01-02 02:38:28.455 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.0555 ms
 2024-01-02 02:38:30.265 +00:00 [INF] Application is shutting down...
+2024-01-02 09:32:14.133 +00:00 [INF] Now listening on: http://localhost:5265
+2024-01-02 09:32:14.930 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-02 09:32:14.931 +00:00 [INF] Hosting environment: Development
+2024-01-02 09:32:14.931 +00:00 [INF] Content root path: /Users/user/Projects/LeaveManagement/LeaveManagement
+2024-01-02 09:33:55.718 +00:00 [WRN] Failed to determine the https port for redirect.
+2024-01-02 09:34:01.513 +00:00 [INF] HTTP GET /Identity/Account/Login responded 200 in 5818.3438 ms
+2024-01-02 09:34:14.041 +00:00 [INF] User logged in.
+2024-01-02 09:34:14.098 +00:00 [INF] HTTP POST /Identity/Account/Login responded 302 in 2974.5840 ms
+2024-01-02 09:34:14.471 +00:00 [INF] HTTP GET / responded 200 in 290.9280 ms
+2024-01-02 09:34:14.547 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.7159 ms
+2024-01-02 09:34:15.184 +00:00 [INF] HTTP GET /js/custom.js responded 304 in 323.9498 ms
+2024-01-02 09:34:15.184 +00:00 [INF] HTTP GET /js/sidebarmenu.js responded 304 in 326.4220 ms
+2024-01-02 09:34:15.184 +00:00 [INF] HTTP GET /css/style.min.css responded 304 in 324.0237 ms
+2024-01-02 09:34:15.185 +00:00 [INF] HTTP GET /js/waves.js responded 304 in 138.6673 ms
+2024-01-02 09:34:15.184 +00:00 [INF] HTTP GET /images/user.jpg responded 304 in 130.3572 ms
+2024-01-02 09:34:15.418 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.1323 ms
+2024-01-02 09:34:15.420 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0579 ms
+2024-01-02 09:34:15.420 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0346 ms
+2024-01-02 09:34:15.422 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.1844 ms
+2024-01-02 09:34:18.876 +00:00 [INF] HTTP GET / responded 200 in 9.3060 ms
+2024-01-02 09:34:18.907 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.0856 ms
+2024-01-02 09:34:18.921 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.0897 ms
+2024-01-02 09:34:18.931 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0946 ms
+2024-01-02 09:34:18.931 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0945 ms
+2024-01-02 09:34:18.931 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0944 ms
+2024-01-02 09:34:22.193 +00:00 [INF] HTTP GET /Employees responded 200 in 1328.8209 ms
+2024-01-02 09:34:22.257 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.0833 ms
+2024-01-02 09:34:22.284 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.1049 ms
+2024-01-02 09:34:22.284 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0615 ms
+2024-01-02 09:34:22.284 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0566 ms
+2024-01-02 09:34:22.286 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.0957 ms
+2024-01-02 13:59:02.639 +00:00 [INF] Application is shutting down...
+2024-01-02 14:13:33.474 +00:00 [INF] Now listening on: http://localhost:5265
+2024-01-02 14:13:33.674 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-02 14:13:33.675 +00:00 [INF] Hosting environment: Development
+2024-01-02 14:13:33.675 +00:00 [INF] Content root path: /Users/user/Projects/LeaveManagement/LeaveManagement
+2024-01-02 14:13:37.353 +00:00 [WRN] Failed to determine the https port for redirect.
+2024-01-02 14:13:40.301 +00:00 [INF] HTTP GET /Employees responded 200 in 2887.1865 ms
+2024-01-02 14:13:41.736 +00:00 [INF] HTTP GET /css/style.min.css responded 304 in 3.5827 ms
+2024-01-02 14:13:42.111 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 1.4577 ms
+2024-01-02 14:13:42.225 +00:00 [INF] HTTP GET /images/user.jpg responded 304 in 0.6706 ms
+2024-01-02 14:13:42.433 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.1334 ms
+2024-01-02 14:13:42.434 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0317 ms
+2024-01-02 14:13:42.434 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0593 ms
+2024-01-02 14:13:42.434 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0322 ms
+2024-01-02 14:13:48.942 +00:00 [INF] HTTP GET /js/custom.js responded 304 in 0.1261 ms
+2024-01-02 14:13:48.942 +00:00 [INF] HTTP GET /js/waves.js responded 304 in 0.0853 ms
+2024-01-02 14:13:49.208 +00:00 [INF] HTTP GET /js/sidebarmenu.js responded 304 in 0.1069 ms
+2024-01-02 14:51:28.102 +00:00 [INF] HTTP GET /Employees responded 200 in 59.4139 ms
+2024-01-02 14:51:31.776 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.0790 ms
+2024-01-02 14:51:31.819 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0685 ms
+2024-01-02 14:51:31.863 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0955 ms
+2024-01-02 14:51:31.908 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0810 ms
+2024-01-02 14:51:32.315 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.0898 ms
+2024-01-02 15:19:38.517 +00:00 [INF] HTTP GET /Employees/ViewAllocations/df73a398-9f47-4d06-8c33-73ff5da57d27 responded 200 in 1597.5782 ms
+2024-01-02 15:19:38.859 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.0767 ms
+2024-01-02 15:19:40.146 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.0911 ms
+2024-01-02 15:19:40.157 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0656 ms
+2024-01-02 15:19:40.158 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0524 ms
+2024-01-02 15:19:40.159 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0338 ms
+2024-01-02 15:20:07.347 +00:00 [INF] HTTP GET /LeaveTypes responded 200 in 1631.2319 ms
+2024-01-02 15:20:07.347 +00:00 [INF] HTTP GET /LeaveTypes responded 200 in 1621.7343 ms
+2024-01-02 15:20:07.452 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.1052 ms
+2024-01-02 15:20:08.313 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.0864 ms
+2024-01-02 15:20:08.314 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0539 ms
+2024-01-02 15:20:08.315 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0352 ms
+2024-01-02 15:20:08.315 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0436 ms
+2024-01-02 15:20:17.018 +00:00 [INF] HTTP GET /LeaveRequests responded 200 in 529.1733 ms
+2024-01-02 15:20:17.074 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.0935 ms
+2024-01-02 15:20:18.097 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.0602 ms
+2024-01-02 15:20:18.098 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0452 ms
+2024-01-02 15:20:18.108 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0670 ms
+2024-01-02 15:20:18.108 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0413 ms
+2024-01-02 15:20:22.023 +00:00 [INF] HTTP GET /Employees responded 200 in 155.6293 ms
+2024-01-02 15:20:22.063 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.2917 ms
+2024-01-02 15:20:22.073 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.0832 ms
+2024-01-02 15:20:22.073 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0320 ms
+2024-01-02 15:20:22.073 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0319 ms
+2024-01-02 15:20:22.075 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0532 ms
+2024-01-02 15:20:26.295 +00:00 [INF] HTTP GET /LeaveTypes responded 200 in 8.0224 ms
+2024-01-02 15:20:26.321 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.0824 ms
+2024-01-02 15:20:26.684 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.2104 ms
+2024-01-02 15:20:26.695 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0576 ms
+2024-01-02 15:20:26.695 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0845 ms
+2024-01-02 15:20:26.695 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0282 ms
+2024-01-02 15:20:29.260 +00:00 [INF] HTTP GET /LeaveRequests responded 200 in 5.8262 ms
+2024-01-02 15:20:29.315 +00:00 [INF] HTTP GET /dist/js/waves.js responded 404 in 0.0386 ms
+2024-01-02 15:20:29.319 +00:00 [INF] HTTP GET /css/icons/font-awesome/css/fontawesome-all.css responded 404 in 0.0572 ms
+2024-01-02 15:20:29.322 +00:00 [INF] HTTP GET /css/icons/weather-icons/css/weather-icons.min.css responded 404 in 0.0449 ms
+2024-01-02 15:20:29.322 +00:00 [INF] HTTP GET /css/icons/themify-icons/themify-icons.css responded 404 in 0.0449 ms
+2024-01-02 15:20:29.322 +00:00 [INF] HTTP GET /css/icons/material-design-iconic-font/css/materialdesignicons.min.css responded 404 in 0.0450 ms
+2024-01-02 16:34:11.454 +00:00 [INF] Application is shutting down...
