@@ -8,27 +8,27 @@ The Leave Management Web App is a comprehensive application designed for efficie
 <p>With its intuitive design and robust functionalities, this web app simplifies the leave management process, fostering a more organized and efficient work environment.</p>
 
 <p align="center">
-<img class=mobile-image src="../images/employeelist.png" /> 
+<img class=mobile-image src="./images/employeelist.png" /> 
 </p>
 
 ## LEAVE TYPES  AND ALLOCATE LEAVE <br/>
 <p align="center">
-<img class=mobile-image src="../images/leavetypes.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/allocate.png" width="47%" />
+<img class=mobile-image src="./images/leavetypes.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/allocate.png" width="47%" />
 </p>
 
 ## LEAVE REQUEST AND  LEAVE ALLOCATIONS<br/>
 <p align="center">
-<img class=mobile-image src="../images/adminleaverequest.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/allocations.png" width="48%" />
+<img class=mobile-image src="./images/adminleaverequest.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/allocations.png" width="48%" />
 </p>
 
 ## APPY FOR LEAVE AND VIEW ALLOCATIONS<br/>
 <p align="center">
-<img class=mobile-image src="./images/applyleave.png" width="47%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="../images/viewalocations.png" width="45%" />
+<img class=mobile-image src="./images/applyleave.png" width="47%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/viewalocations.png" width="45%" />
 </p>
 
 ## LEAVE DETAILS AND EDIT <br/>
 <p align="center">
-<img class=mobile-image src="../images/Details.png" width="48%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="../images/edit.png" width="45%" />
+<img class=mobile-image src="./images/Details.png" width="48%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/edit.png" width="45%" />
 </p>
 
 
