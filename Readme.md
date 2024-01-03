@@ -28,7 +28,7 @@ The Leave Management Web App is a comprehensive application designed for efficie
 
 ## LEAVE DETAILS AND EDIT <br/>
 <p align="center">
-<img class=mobile-image src="./images/Details.png" width="48%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/edit.png" width="45%" />
+<img class=mobile-image src="./images/details.png" width="48%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/edit.png" width="45%" />
 </p>
 
 
