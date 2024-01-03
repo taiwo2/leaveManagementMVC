@@ -43,7 +43,7 @@ namespace LeaveManagement.Services
 			return await _context.Set<T>().ToListAsync();
 		}
 
-		public async Task<T?> GetAsync(int? id)
+		public async Task<T> GetAsync(int? id)
 		{
 			if (id == null)
 			{
@@ -54,7 +54,9 @@ namespace LeaveManagement.Services
 
 		public async Task UpdateAsync(T entity)
 		{
-			_context.Entry(entity).State = EntityState.Modified;
+
+			_context.Update(entity);
+			// _context.Entry(entity).State = EntityState.Modified;
 			await _context.SaveChangesAsync();
 		}
 	}

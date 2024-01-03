@@ -102,7 +102,7 @@ namespace LeaveManagement.Data.Migrations
                         {
                             Id = "6d77d78b9d7d-1c3e-449d-f66e1234",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5038cf29-3b7f-43aa-a2e5-6036426c73d7",
+                            ConcurrencyStamp = "3ccdb69d-66e1-4ce1-b49f-ef27dc0711d1",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "adminsson@hotmail.com",
@@ -112,9 +112,9 @@ namespace LeaveManagement.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMINSSON@HOTMAIL.COM",
                             NormalizedUserName = "ADMINSSON@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJWIzTonrjCpD7Xezp79VcaTNm9RBcyHoiHQQlmafhrloSQYT7A42BSKRH4gSjOu4A==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELxPhrbzRAdd3qeALzgBPSVtth9CPohmlKd1Fs8aFfPjxNByG8dOkrTOIgkSSdAiHw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "853dff8b-158d-4a41-8e44-7718dd816d45",
+                            SecurityStamp = "f3ba8ccc-a8be-4331-b838-257df51af38b",
                             TwoFactorEnabled = false,
                             UserName = "adminsson@hotmail.com"
                         },
@@ -122,7 +122,7 @@ namespace LeaveManagement.Data.Migrations
                         {
                             Id = "f66e1234-1c3e-449d-80c7-6d77d7",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3f85cfdf-515b-4fe4-9a00-414b8873b4a8",
+                            ConcurrencyStamp = "02f8913a-f4c1-401e-812b-c9d08840d801",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "usersson@hotmail.com",
@@ -132,9 +132,9 @@ namespace LeaveManagement.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USERSSON@HOTMAIL.COM",
                             NormalizedUserName = "USERSSON@HOTMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOvCrnWEZSY9Dz2jH9nONw0Eo+lUen++5HqEZI2mR3WUDV8KCIctAAhzW2y28+TgUA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEC2MIk0B3VmbyJOH/eZ4D0VOyuy1FkGP1R6xXv6VUk/AKTtWJ1p75+OZHQMflh+3aQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b360950d-714e-4a4f-a1af-051d08b85b92",
+                            SecurityStamp = "647acd51-08b7-4028-95ec-ff7757be756e",
                             TwoFactorEnabled = false,
                             UserName = "usersson@hotmail.com"
                         });

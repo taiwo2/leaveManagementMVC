@@ -42,3 +42,5 @@ namespace LeaveManagement.Data
 // dotnet aspnet-codegenerator controller -name ExampleController -outDir Controllers --no-build
 // then install 
 // Add Microsoft.VisualStudio.Web.CodeGeneration.Design 
+//  export NVM_DIR="$HOME/.nvm"
+// . "$(brew --prefix nvm)/nvm.sh"

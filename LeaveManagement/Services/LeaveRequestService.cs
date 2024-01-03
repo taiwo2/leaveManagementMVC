@@ -45,8 +45,8 @@ namespace LeaveManagement.Services
 
             var user = await _userManager.FindByIdAsync(leaveRequest.RequestingEmployeeId);
 
-            await _emailSender.SendEmailAsync(user.Email, $"Leave Request Cancelled", $"Your leave request from " +
-                $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been Cancelled Successfully.");
+            // await _emailSender.SendEmailAsync(user.Email, $"Leave Request Cancelled", $"Your leave request from " +
+            //     $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been Cancelled Successfully.");
 
         }
 
@@ -69,8 +69,8 @@ namespace LeaveManagement.Services
             var user = await _userManager.FindByIdAsync(leaveRequest.RequestingEmployeeId);
             var approvalStatus = approved ? "Approved" : "Declined";
 
-            await _emailSender.SendEmailAsync(user.Email, $"Leave Request {approvalStatus}", $"Your leave request from " +
-                $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been {approvalStatus}");
+            // await _emailSender.SendEmailAsync(user.Email, $"Leave Request {approvalStatus}", $"Your leave request from " +
+            //     $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been {approvalStatus}");
 
         }
 
